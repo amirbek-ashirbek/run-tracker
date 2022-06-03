@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">RunTracker</string>
+    <string-array name="filter_options">
+        <item>Date</item>
+        <item>Running Time</item>
+        <item>Distance</item>
+        <item>Average Speed</item>
+        <item>Calories Burned</item>
+    </string-array>
+
+    <string name="date">Date</string>
+    <string name="running_time">Running Time</string>
+    <string name="duration">Duration</string>
+    <string name="distance">Distance</string>
+    <string name="average_speed">Average Speed</string>
+    <string name="calories_burned">Calories Burned</string>
+    <string name="your_runs">Your Runs</string>
+    <string name="statistics">Statistics</string>
+    <string name="settings">Settings</string>
+    <string name="hint_your_name">Your Name</string>
+    <string name="hint_your_weight">Your Weight</string>
+    <string name="setup_text">Welcome!\nPlease enter your name and weight.</string>
+    <string name="button_continue">Continue</string>
+    <string name="location_permission_granted">Location permission is granted.</string>
+    <string name="are_you_sure">Are You Sure?</string>
+    <string name="allow">Allow</string>
+    <string name="deny_anyway">Deny anyway</string>
+    <string name="location_access_denied">Location access denied.</string>
+    <string name="location_permission_denied_alert_message">RunTracker needs to access your location to track your runs.</string>
+    <string name="location_permission_denied_permanently_alert_message">Location access is denied permanently. Now you can only change permissions in App Settings.</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="cancel_run_question">Cancel the Run?</string>
+    <string name="cancel_run_message_question">Would you like to cancel the current run and delete all its data?</string>
+    <string name="run_saved_successfully">Run saved successfully.</string>
+    <string name="fill_all_required_fields">Please, fill in all the required fields.</string>
+    <string name="changes_saved">Changes saved.</string>
+    <string name="average_speed_over_time">Average Speed Over Time.</string>
+    <string name="kg">Kg</string>
+    <string name="time">Time</string>
+    <string name="calories">Calories</string>
+
+</resources>
