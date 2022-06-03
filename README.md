@@ -1,0 +1,2 @@
+# run-tracker
+An app that is used to track user's runs. It shows run's path on a Google MapView, calculates and shows distance, average speed, time, date and number of calories burned on each run. The statistics of total distance, running time and calories burned are also calculated and shown in Statistics Fragment. The data is observed using LiveData and saved in a Room database. The Dagger Hilt is also used for dependency injection.
