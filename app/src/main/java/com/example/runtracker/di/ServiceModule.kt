@@ -3,6 +3,7 @@ package com.example.runtracker.di
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import androidx.core.app.NotificationCompat
 import com.example.runtracker.R
 import com.example.runtracker.other.Constants
@@ -30,14 +31,21 @@ object ServiceModule {
     @Provides
     fun provideMainActivityPendingIntent(
         @ApplicationContext app: Context
-    ) = PendingIntent.getActivity(
-        app,
-        0,
-        Intent(app, MainActivity::class.java).also {
-            it.action = Constants.ACTION_SHOW_TRACKING_FRAGMENT
-        },
-        PendingIntent.FLAG_UPDATE_CURRENT
-    )
+    ): PendingIntent {
+        val flags = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        } else {
+            PendingIntent.FLAG_UPDATE_CURRENT
+        }
+        return PendingIntent.getActivity(
+            app,
+            0,
+            Intent(app, MainActivity::class.java).also {
+                it.action = Constants.ACTION_SHOW_TRACKING_FRAGMENT
+            },
+            flags
+        )
+    }
 
     @ServiceScoped
     @Provides
